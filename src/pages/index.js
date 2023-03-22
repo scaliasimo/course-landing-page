@@ -8,23 +8,18 @@ import * as styles from "../components/index.module.css"
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Learn to design and code <b>React</b> apps
-      </h1>
-      <p className={styles.intro}>
-        Complete courses about the best tools and design systems. Prototype and build apps with React and Swift.
-      </p>
-
+    <div className="Hero">
+      <div className="HeroGroup">
+        <div>
+          <h1>
+            Learn to code cool <b>React</b> apps
+          </h1>
+          <p>
+            Complete courses about the best tools and design systems. Prototype and build apps with React and Swift.
+          </p>
+          <Link to="/page-2/">Watch the video</Link>
+        </div>
+      </div>
     </div>
   </Layout>
 )
