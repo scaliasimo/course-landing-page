@@ -116,7 +116,7 @@ a {
  }
 
  @media (max-width: 640px) {
-  .Hero logos {
+  .Hero .logos {
     grid-template-columns: repeat(3, 1fr);
   }
  }
@@ -134,18 +134,17 @@ a {
  .cardGroup {
   margin: 50px 40px 100px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
   justify-items: center;
 }
 
-@media (min-width: 1600px){ 
+@media (min-width: 1740px){ 
   .cardGroup {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
-@media (max-width: 1599px){ 
+@media (max-width: 1739px){ 
   .cardGroup {
     grid-template-columns: repeat(4, 1fr);
   }

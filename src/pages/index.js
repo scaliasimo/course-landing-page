@@ -13,22 +13,38 @@ const IndexPage = () => (
       <div className="HeroGroup">
         <div>
           <h1>
-            Learn to code cool <br /><b>React</b> apps
+            Learn to code cool <br />
+            <b>React</b> apps
           </h1>
           <p>
-            Complete courses about the best tools and design systems. Prototype and build apps with React and Swift.
+            Complete courses about the best tools and design systems. Prototype
+            and build apps with React and Swift.
           </p>
           <Link to="/page-2/">Watch the video</Link>
           <div className="logos">
-            <img src={require("../images/logo-sketch.png").default} width="50" />
+            <img
+              src={require("../images/logo-sketch.png").default}
+              width="50"
+            />
             <img src={require("../images/logo-figma.png").default} width="50" />
-            <img src={require("../images/logo-studio.png").default} width="50" />
-            <img src={require("../images/logo-framer.png").default} width="50" />
+            <img
+              src={require("../images/logo-studio.png").default}
+              width="50"
+            />
+            <img
+              src={require("../images/logo-framer.png").default}
+              width="50"
+            />
             <img src={require("../images/logo-react.png").default} width="50" />
             <img src={require("../images/logo-swift.png").default} width="50" />
           </div>
-          <svg width="100%" height="200px" fill="none" version="1.1"
-            xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="100%"
+            height="200px"
+            fill="none"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#fff" />
               <stop offset="50%" stopColor="#fff" />
@@ -45,7 +61,8 @@ const IndexPage = () => (
           V 359 
           H 0 
           V 67
-          Z">
+          Z"
+            >
               <animate
                 repeatCount="indefinite"
                 fill="url(#grad1)"
@@ -92,15 +109,15 @@ const IndexPage = () => (
             H 0 
             V 67 
             Z
-            ">
-              </animate>
+            "
+              ></animate>
             </path>
           </svg>
         </div>
       </div>
     </div>
     <div className="Cards">
-      <h2>11 courses, more coming</h2>
+      <h2>10 courses, more coming</h2>
       <div className="cardGroup">
         <Card
           title="Design System"
@@ -121,6 +138,36 @@ const IndexPage = () => (
           title="ARKit 2"
           text="10 section"
           image={require("../images/course-wallpaper-4.jpg").default}
+        />
+        <Card
+          title="Web3 for Creatives"
+          text="6 section"
+          image={require("../images/course-wallpaper-5.jpg").default}
+        />
+        <Card
+          title="Data Visualization"
+          text="15 section"
+          image={require("../images/course-wallpaper-6.jpg").default}
+        />
+        <Card
+          title="CLI for Designers"
+          text="4 section"
+          image={require("../images/course-wallpaper-7.jpg").default}
+        />
+        <Card
+          title="Page Transitions"
+          text="9 section"
+          image={require("../images/course-wallpaper-8.jpg").default}
+        />
+        <Card
+          title="Advanced Animations with GSAP"
+          text="11 section"
+          image={require("../images/course-wallpaper-9.jpg").default}
+        />
+        <Card
+          title="Instagram Filters + Spark AR"
+          text="14 section"
+          image={require("../images/course-wallpaper-10.jpg").default}
         />
       </div>
     </div>
