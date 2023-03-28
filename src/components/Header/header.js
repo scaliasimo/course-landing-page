@@ -29,7 +29,7 @@ const Header = () => {
         hasScrolled ? "header HeaderScrolled" : "header"
       }>
         <div className="HeaderGroup">
-          <Link to="/"><img src={logo} width="30" /></Link>
+          <Link to="/"><img src={logo} width="30" alt="React Dojo official logo" /></Link>
           <Link to="/courses">Courses</Link>
           <Link to="/downloads">Downloads</Link>
           <Link to="/workshops">Workshops</Link>

@@ -9,10 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Course Landing Page`,
-    description: `Kick off your career with one of the best development course.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `React Dojo`,
+    description: `Kick off your career with one of the best rect development course.`,
+    author: ``,
+    siteUrl: `https://incandescent-chebakia-2eda58.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -25,6 +25,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: 'e4vkeo8guu9z',
+        accessToken: 'DkIk5gQCTnbWy-mmxXhddCX1QlsLeVcAoXKFG2mstJ0',
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

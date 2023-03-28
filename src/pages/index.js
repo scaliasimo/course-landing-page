@@ -49,19 +49,24 @@ const IndexPage = () => (
           <div className="logos">
             <img
               src={require("../images/logo-sketch.png").default}
+              alt="Sketch"
               width="50"
             />
-            <img src={require("../images/logo-figma.png").default} width="50" />
+            <img src={require("../images/logo-figma.png").default}
+              alt="Figma"
+              width="50" />
             <img
               src={require("../images/logo-studio.png").default}
+              alt="Studio"
               width="50"
             />
             <img
               src={require("../images/logo-framer.png").default}
+              alt="Framer"
               width="50"
             />
-            <img src={require("../images/logo-react.png").default} width="50" />
-            <img src={require("../images/logo-swift.png").default} width="50" />
+            <img src={require("../images/logo-react.png").default} alt="React" width="50" />
+            <img src={require("../images/logo-swift.png").default} alt="Swift" width="50" />
           </div>
           <svg
             width="100%"

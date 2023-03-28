@@ -7,8 +7,8 @@
 
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Footer from "./Footer/Footer"
 
-import Header from "./Header/header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -17,6 +17,16 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          description
+        }
+      }
+      allContentfulLink(sort: {fields: [createdAt], order: ASC}) {
+        edges {
+          node {
+            title
+            url
+            createdAt
+          }
         }
       }
     }
@@ -25,7 +35,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <div>
-        <main>{children}</main>
+        <main>
+          {children}
+          <Footer data={data}>
+            Backgrounds made in Cinema 4D, iOS app in Swift, site in React.<br /><br />© 2018
+          </Footer>
+        </main>
       </div>
     </>
   )
