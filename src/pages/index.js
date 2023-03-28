@@ -1,10 +1,35 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 import Header from "../components/Header/header"
 import Card from "../components/Card/Card"
+import Cell from "../components/Cell/Cell"
+import staticdata from "../../staticdata.json"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+
+const SectionCaption = styled.div`
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #94a4ba;
+  text-align: center;
+  margin-bottom: 24px;
+`
+
+const SectionCellGroup = styled.div`
+  max-width: 900px;
+  margin: 0 auto 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  padding: 0 20px;
+
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`
 
 const IndexPage = () => (
   <Layout>
@@ -171,6 +196,12 @@ const IndexPage = () => (
         />
       </div>
     </div>
+    <SectionCaption>12 sections - 6 hours</SectionCaption>
+    <SectionCellGroup>
+      {staticdata.cells.map(cell => (
+        <Cell title={cell.title} image={cell.image} />
+      ))}
+    </SectionCellGroup>
   </Layout>
 )
 
