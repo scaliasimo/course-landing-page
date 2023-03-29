@@ -85,9 +85,11 @@ const Footer = ({ data, children }) => (
         <Text>
             Prototype and build apps today with React and Swift.
         </Text>
-        <StripeCheckout amount={5000} currency="eur" image={logo} token={handlePurchase} stripeKey={''} style={{ justifySelf: 'center' }}>
-            <Button>Start free trial</Button>
-        </StripeCheckout >
+        <div style={{ textAlign: 'center' }}>
+            <StripeCheckout amount={5000} currency="eur" image={logo} token={handlePurchase} stripeKey={''} style={{ textAlign: 'center' }}>
+                <Button>Start free trial</Button>
+            </StripeCheckout >
+        </div>
         <LinkGroup>
             {data.allContentfulLink.edges.map(edge => (
                 <a key={edge.node.title} href={edge.node.url}>{edge.node.title}</a>
