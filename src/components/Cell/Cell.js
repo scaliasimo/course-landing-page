@@ -15,7 +15,7 @@ const rotate = keyframes`
   100% {
     transform: rotate(360deg);
   }
-`;
+`
 
 
 const CellImage = styled.div`
@@ -34,10 +34,10 @@ const CellTitle = styled.div`
 `
 
 const Cell = props => (
-    <CellGroup>
-        <CellImage image={props.image} />
-        <CellTitle>{props.title}</CellTitle>
-    </CellGroup>
+  <CellGroup>
+    <CellImage image={props.image} />
+    <CellTitle>{props.title}</CellTitle>
+  </CellGroup>
 )
 
 export default Cell
