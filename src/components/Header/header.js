@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import logo from "../../images/logo.png"
 import "./Header.css"
+import StripeCheckout from "react-stripe-checkout"
 
 const Header = () => {
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -23,6 +24,24 @@ const Header = () => {
     };
   }, []);
 
+  const handlePurchase = (token) => {
+    const amount = 5000
+    const description = "React Course Subscription"
+
+    const bodyObject = {
+      tokenId: token.id,
+      email: token.email,
+      name: token.name,
+      description,
+      amount
+    }
+
+    fetch('http://localhost:9000/stripe-charge', {
+      method: 'POST',
+      body: JSON.stringify(bodyObject)
+    })
+  }
+
   return (
     <>
       <header className={
@@ -33,7 +52,9 @@ const Header = () => {
           <Link to="/courses">Courses</Link>
           <Link to="/downloads">Downloads</Link>
           <Link to="/workshops">Workshops</Link>
-          <Link to="/buy"><button>Try for free</button></Link>
+          <StripeCheckout amount={5000} currency="eur" image={logo} token={handlePurchase} stripeKey={''}>
+            <button>Try for free</button>
+          </StripeCheckout>
         </div>
       </header>
     </>

@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import StripeCheckout from "react-stripe-checkout";
+import logo from "../../images/logo.png";
 
 const FooterGroup = styled.div`
     background: #f1f3f5;
@@ -25,6 +27,7 @@ const Button = styled.button`
     padding: 16px 60px;
     font-weight: 600;
     font-size: 24px;
+    margin: 0 auto;
     justify-self: center;
     cursor: pointer;
     transition: 0.8s ;
@@ -59,19 +62,39 @@ const Copyright = styled.div`
     padding: 0 20px;
 `
 
+const handlePurchase = (token) => {
+    const amount = 5000
+    const description = "React Course Subscription"
+
+    const bodyObject = {
+        tokenId: token.id,
+        email: token.email,
+        name: token.name,
+        description,
+        amount
+    }
+
+    fetch('http://localhost:9000/stripe-charge', {
+        method: 'POST',
+        body: JSON.stringify(bodyObject)
+    })
+}
+
 const Footer = ({ data, children }) => (
     <FooterGroup>
         <Text>
             Prototype and build apps today with React and Swift.
         </Text>
-        <Button>Start free trial</Button>
+        <StripeCheckout amount={5000} currency="eur" image={logo} token={handlePurchase} stripeKey={''} style={{ justifySelf: 'center' }}>
+            <Button>Start free trial</Button>
+        </StripeCheckout >
         <LinkGroup>
             {data.allContentfulLink.edges.map(edge => (
                 <a key={edge.node.title} href={edge.node.url}>{edge.node.title}</a>
             ))}
         </LinkGroup>
         <Copyright>{children}</Copyright>
-    </FooterGroup>
+    </FooterGroup >
 )
 
 export default Footer

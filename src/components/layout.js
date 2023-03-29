@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
         <main>
           {children}
           <Footer data={data}>
-            Backgrounds made in Cinema 4D, iOS app in Swift, site in React.<br /><br />© 2018
+            Backgrounds made in Cinema 4D, iOS app in Swift, site in React.<br /><br />© 2023
           </Footer>
         </main>
       </div>
