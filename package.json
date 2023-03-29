@@ -9,6 +9,7 @@
     "gatsby": "^5.7.0",
     "gatsby-plugin-image": "^3.7.0",
     "gatsby-plugin-manifest": "^5.7.0",
+    "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-sharp": "^5.7.0",
     "gatsby-plugin-styled-components": "^6.8.0",
     "gatsby-source-contentful": "^8.8.0",
