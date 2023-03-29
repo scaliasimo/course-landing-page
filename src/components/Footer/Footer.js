@@ -67,7 +67,7 @@ const Footer = ({ data, children }) => (
         <Button>Start free trial</Button>
         <LinkGroup>
             {data.allContentfulLink.edges.map(edge => (
-                <a href={edge.node.url}>{edge.node.title}</a>
+                <a key={edge.node.title} href={edge.node.url}>{edge.node.title}</a>
             ))}
         </LinkGroup>
         <Copyright>{children}</Copyright>
